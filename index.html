@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlay Mackenzie's Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: relative;
+            text-align: center;
+            color: white;
+            background-color: #9660E5;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Maximum height of the banner */
+        }
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 2.5em;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #9660E5;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #ddd;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://t3.ftcdn.net/jpg/05/14/95/12/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg" alt="Banner">
+        <h1>Finlay Mackenzie's Site</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <h2 id="home">Home</h2>
+        <p>This is the home page content. You can add more sections or change the existing content.</p>
+        
+        <button class="collapsible">Useful Links</button>
+        <div class="content">
+            <h4>SOC</h4>
+            <ul>
+                <li><a href="https://portal.azure.com/#home" target="_blank">Azure</a></li>
+                <li><a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview" target="_blank">AD</a></li>
+                <li><a href="https://portal.azure.com/changeincode" target="_blank">Sentinel</a></li>
+                <li><a href="https://security.microsoft.com/homepage?tid=3ed6eb6f-f786-4caa-ab61-71333c0d8988" target="_blank">Defender</a></li>
+                <li><a href="https://systal.service-now.com/now/nav/ui/classic/params/target/home_splash.do%3Fsysparm_direct%3Dtrue" target="_blank">SNOW</a></li>
+            </ul>
+            
+            <h4>Google Stuff</h4>
+            
+            <h4>Microsoft Stuff</h4>
+            <ul>
+                <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
+            </ul>
+            
+            <h4>Cool Stuff</h4>
+            <ul>
+                <li><a href="https://replit.com/@spudgun28905/DefenselessReasonablePlot#Main.java" target="_blank">Java City Picker</a></li>
+                <li><a href="https://bard.google.com/" target="_blank">Gemini</a></li>
+            </ul>
+            
+            <h4>GitHub</h4>
+            <ul>
+                <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hacking tools</a></li>
+                <li><a href="https://github.com/finlaymac13/Next-Gens-Azure-Repo" target="_blank">Azure repo</a></li>
+                <li><a href="https://github.com/finlaymac13/mywebsite" target="_blank">My site repo</a></li>
+            </ul>
+            
+            <h4>Tools</h4>
+            <ul>
+                <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
+                <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
+                <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
+                <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
+                <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
+                <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
+                <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
+                <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
+            </ul>
+            
+            <h4>Napier</h4>
+            <ul>
+                <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
+            </ul>
+            
+            <h4>Articles</h4>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">MS malware naming convention</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide" target="_blank">MS threat actor naming convention</a></li>
+            </ul>
+            
+            <h4>SC-200 Exam Prep</h4>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification" target="_blank">SC-200 home page</a></li>
+                <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-exam-prep/learn/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
+                <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
+                <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
+                <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
+            </ul>
+            
+            <h4>GPT</h4>
+            <ul>
+                <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+            </ul>
+            
+            <h4>Website</h4>
+            <ul>
+                <li><a href="https://finlaymac13.github.io/mywebsite/" target="_blank">My Site</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="about">About</h2>
+        <h3>UNI</h3>
+        <p>
+            I am currently a second year student at Edinburgh Napier University studying Cybersecurity.
+            <a href="https://www.napier.ac.uk/study-with-us/apprenticeships/beng-hons-cybersecurity-ga" target="_blank">Link to course</a>
+        </p>
+        <p>Here are the following modules I have completed and have some expertise in:</p>
+        <ul>
+            <li>Java</li>
+            <li>Information Systems</li>
+            <li>Basic Networking</li>
+            <li>Human Computer Interaction</li>
+            <li>Computer Architecture and Networks</li>
+            <li>Professional Practice</li>
+        </ul>
+        <h3>WORK</h3>
+        <p>
+            I am currently working at Systal Technology Solutions as a Level 1 SOC Analyst.
+        </p>
+        <p>
+            At Systal Technology Solutions, I work in our in-house Security Operations Centre (SOC) where my contributions in information security analysis and defensive security help the organisation and others protect their online environments.
+        </p>
+        <p>
+            My certifications, including those from IBM, Cloudflare, and Cisco bolster my analytical skills, equipping us to preemptively counteract digital threats. Together, my team and I watch our SIEM tools diligently, contributing to the safeguarding of our digital infrastructure. I have also entered into the world of Digital Forensics where I have learned about the vast subject of Android forensics and how to obtain information from an Android device to aid in an investigation.
+        </p>
+        <p>
+            In the near future, I aim to achieve some more certifications from Microsoft (the SC-200) and from IBM (the IBM certified analyst - security QRadar SIEM), along with progressing my studies at Napier.
+        </p>
+        
+        <h2 id="services">Services</h2>
+        <p>This is the services page content.</p>
+        
+        <h2 id="contact">Contact</h2>
+        <ul>
+           <li>Email: <a href="mailto:finlay@mackenzie1.co.uk">finlay@mackenzie1.co.uk</a></li>
+           <li>LinkedIn: <a href="https://www.linkedin.com/in/finlay-mackenzie-809188221/" target="_blank">https://www.linkedin.com/in/finlay-mackenzie-809188221/</a><li>
+        </ul>
+    </main>
+    <footer>
+        <p>© 2024 Finlay Mackenzie's Site</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
