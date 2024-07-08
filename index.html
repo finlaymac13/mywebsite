@@ -16,11 +16,13 @@
             text-align: center;
             color: white;
             background-color: #9660E5;
+            overflow: hidden; /* Ensure overflow is hidden to cut off the banner */
         }
         header img {
             width: 100%;
             height: auto;
             max-height: 100px; /* Maximum height of the banner */
+            object-fit: cover; /* Ensure the image covers the container */
         }
         header h1 {
             position: absolute;
@@ -106,7 +108,9 @@
 <body>
     <a id="top"></a> <!-- Anchor at the top of the page -->
     <header>
-        <img src="https://t3.ftcdn.net/jpg/04/02/06/34/360_F_402063409_bDFMmQ38hh69DVScVYdlbzMxL0id3mWU.jpg" alt="Banner">
+        <div class="banner">
+            <img src="https://t3.ftcdn.net/jpg/05/14/95/12/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg" alt="Banner">
+        </div>
         <h1>Finlay Mackenzie's Site</h1>
     </header>
     <nav>
