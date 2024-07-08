@@ -18,6 +18,11 @@
             background-color: #9660E5;
             overflow: hidden; /* Ensure overflow is hidden to cut off the banner */
         }    
+        header img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Maximum height of the banner */
+        }
         header h1 {
             position: absolute;
             top: 50%;
@@ -101,6 +106,9 @@
 </head>
 <body>
     <a id="top"></a> <!-- Anchor at the top of the page -->
+    <header>
+        <h1>Finlay Mackenzie's Site</h1>
+    </header>
     <nav>
         <a onclick="showSection('home')">Home</a>
         <a onclick="showSection('about')">About</a>
