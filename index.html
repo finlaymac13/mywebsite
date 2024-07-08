@@ -41,6 +41,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            cursor: pointer;
         }
         nav a:hover {
             background-color: #ddd;
@@ -77,103 +78,119 @@
             overflow: hidden;
             background-color: #f1f1f1;
         }
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        .section-content {
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <a id="top"></a> <!-- Anchor at the top of the page -->
     <header>
-        <img src="https://www.freewebheaders.com/wp-content/gallery/abstract-size-800x200/cache/red-blue-yellow-smoke-abstract-header-800x200.jpg-nggid0511692-ngg0dyn-800x200x100-00f0w010c010r110f110r010t010.jpg" alt="Banner">
+        <img src="https://t3.ftcdn.net/jpg/05/14/95/12/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg" alt="Banner">
         <h1>Finlay Mackenzie's Site</h1>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('services')">Services</a>
+        <a onclick="showSection('contact')">Contact</a>
     </nav>
     <main>
-        <h2 id="home">Home</h2>
-        <p>This is the home page content. You can add more sections or change the existing content.</p>
+        <section id="home" class="section-content active">
+            <h2>Home</h2>
+            <p>This is the home page content. You can add more sections or change the existing content.</p>
+            
+            <button class="collapsible">Useful Links</button>
+            <div class="content">
+                <h4>SOC</h4>
+                <ul>
+                    <li><a href="https://portal.azure.com/#home" target="_blank">Azure</a></li>
+                    <li><a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview" target="_blank">AD</a></li>
+                    <li><a href="https://portal.azure.com/changeincode" target="_blank">Sentinel</a></li>
+                    <li><a href="https://security.microsoft.com/homepage?tid=3ed6eb6f-f786-4caa-ab61-71333c0d8988" target="_blank">Defender</a></li>
+                    <li><a href="https://systal.service-now.com/now/nav/ui/classic/params/target/home_splash.do%3Fsysparm_direct%3Dtrue" target="_blank">SNOW</a></li>
+                </ul>
+                
+                <h4>Google Stuff</h4>
+                
+                <h4>Microsoft Stuff</h4>
+                <ul>
+                    <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
+                </ul>
+                
+                <h4>Cool Stuff</h4>
+                <ul>
+                    <li><a href="https://replit.com/@spudgun28905/DefenselessReasonablePlot#Main.java" target="_blank">Java City Picker</a></li>
+                    <li><a href="https://bard.google.com/" target="_blank">Gemini</a></li>
+                </ul>
+                
+                <h4>GitHub</h4>
+                <ul>
+                    <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hacking tools</a></li>
+                    <li><a href="https://github.com/finlaymac13/Next-Gens-Azure-Repo" target="_blank">Azure repo</a></li>
+                    <li><a href="https://github.com/finlaymac13/mywebsite" target="_blank">My site repo</a></li>
+                </ul>
+                
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
+                    <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
+                    <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
+                    <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
+                    <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
+                    <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
+                    <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
+                    <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
+                </ul>
+                
+                <h4>Napier</h4>
+                <ul>
+                    <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
+                </ul>
+                
+                <h4>Articles</h4>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">MS malware naming convention</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide" target="_blank">MS threat actor naming convention</a></li>
+                </ul>
+                
+                <h4>SC-200 Exam Prep</h4>
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification" target="_blank">SC-200 home page</a></li>
+                    <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-exam-prep/learn/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
+                    <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
+                    <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
+                    <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
+                </ul>
+                
+                <h4>GPT</h4>
+                <ul>
+                    <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+                </ul>
+                
+                <h4>Website</h4>
+                <ul>
+                    <li><a href="https://finlaymac13.github.io/mywebsite/" target="_blank">My Site</a></li>
+                </ul>
+            </div>
+        </section>
         
-        <button class="collapsible">Useful Links</button>
-        <div class="content">
-            <h4>SOC</h4>
-            <ul>
-                <li><a href="https://portal.azure.com/#home" target="_blank">Azure</a></li>
-                <li><a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview" target="_blank">AD</a></li>
-                <li><a href="https://portal.azure.com/changeincode" target="_blank">Sentinel</a></li>
-                <li><a href="https://security.microsoft.com/homepage?tid=3ed6eb6f-f786-4caa-ab61-71333c0d8988" target="_blank">Defender</a></li>
-                <li><a href="https://systal.service-now.com/now/nav/ui/classic/params/target/home_splash.do%3Fsysparm_direct%3Dtrue" target="_blank">SNOW</a></li>
-            </ul>
-            
-            <h4>Google Stuff</h4>
-            
-            <h4>Microsoft Stuff</h4>
-            <ul>
-                <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
-            </ul>
-            
-            <h4>Cool Stuff</h4>
-            <ul>
-                <li><a href="https://replit.com/@spudgun28905/DefenselessReasonablePlot#Main.java" target="_blank">Java City Picker</a></li>
-                <li><a href="https://bard.google.com/" target="_blank">Gemini</a></li>
-            </ul>
-            
-            <h4>GitHub</h4>
-            <ul>
-                <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hacking tools</a></li>
-                <li><a href="https://github.com/finlaymac13/Next-Gens-Azure-Repo" target="_blank">Azure repo</a></li>
-                <li><a href="https://github.com/finlaymac13/mywebsite" target="_blank">My site repo</a></li>
-            </ul>
-            
-            <h4>Tools</h4>
-            <ul>
-                <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
-                <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
-                <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
-                <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
-                <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
-                <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
-                <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
-                <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
-            </ul>
-            
-            <h4>Napier</h4>
-            <ul>
-                <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
-            </ul>
-            
-            <h4>Articles</h4>
-            <ul>
-                <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">MS malware naming convention</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide" target="_blank">MS threat actor naming convention</a></li>
-            </ul>
-            
-            <h4>SC-200 Exam Prep</h4>
-            <ul>
-                <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification" target="_blank">SC-200 home page</a></li>
-                <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-exam-prep/learn/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
-                <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
-                <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
-                <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
-            </ul>
-            
-            <h4>GPT</h4>
-            <ul>
-                <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
-            </ul>
-            
-            <h4>Website</h4>
-            <ul>
-                <li><a href="https://finlaymac13.github.io/mywebsite/" target="_blank">My Site</a></li>
-            </ul>
-        </div>
-        
-        <h2 id="about">About</h2>
-        <h3>UNI</h3>
-        <p>
-            I am currently a second year student at Edinburgh Napier University studying Cybersecurity.
-            <a href="https://www.napier.ac.uk/study-with-us/apprenticeships/beng-hons-cybersecurity-ga" target="_blank">Link to course</a>
+        <section id="about" class="section-content">
+            <h2>About</h2>
+            <h3>UNI</h3>
+            <p>
+                I am currently a second year student at Edinburgh Napier University studying Cybersecurity.
+                 <a href="https://www.napier.ac.uk/study-with-us/apprenticeships/beng-hons-cybersecurity-ga" target="_blank">Link to course</a>
         </p>
         <p>Here are the following modules I have completed and have some expertise in:</p>
         <ul>
@@ -197,21 +214,34 @@
         <p>
             In the near future, I aim to achieve some more certifications from Microsoft (the SC-200) and from IBM (the IBM certified analyst - security QRadar SIEM), along with progressing my studies at Napier.
         </p>
+        </section>
         
-        <h2 id="services">Services</h2>
-        <p>This is the services page content.</p>
+        <section id="services" class="section-content">
+            <h2>Services</h2>
+            <p>This is the services page content.</p>
+        </section>
         
-        <h2 id="contact">Contact</h2>
-        <ul>
-           <li>Email: <a href="mailto:finlay@mackenzie1.co.uk">finlay@mackenzie1.co.uk</a></li>
-           <li>LinkedIn: <a href="https://www.linkedin.com/in/finlay-mackenzie-809188221/" target="_blank">https://www.linkedin.com/in/finlay-mackenzie-809188221/</a><li>
-        </ul>
+        <section id="contact" class="section-content">
+            <h2>Contact</h2>
+            <p>
+                Email: <a href="mailto:example@example.com">example@example.com</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/mysite" target="_blank">www.linkedin.com/mysite</a>
+            </p>
+        </section>
     </main>
     <footer>
         <p><a href="#top" style="color: white;">Return to the top of the page</a></p>
         <p>© 2024 Finlay Mackenzie's Site</p>
     </footer>
     <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('section-content');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
         document.addEventListener("DOMContentLoaded", function() {
             var coll = document.getElementsByClassName("collapsible");
             var i;
