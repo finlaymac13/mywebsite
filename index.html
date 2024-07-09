@@ -99,13 +99,18 @@
         .section-content.active {
             display: block;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
         .tile {
             background-color: #f8f8f8;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
-            margin: 10px 0;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, border-color 0.3s;
         }
         .tile:hover {
             background-color: #eee;
@@ -137,97 +142,99 @@
             
             <button class="collapsible">Useful Links</button>
             <div class="content">
-                <div class="tile">
-                    <h4>SOC</h4>
-                    <ul>
-                        <li><a href="https://portal.azure.com/#home" target="_blank">Azure</a></li>
-                        <li><a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview" target="_blank">AD</a></li>
-                        <li><a href="https://portal.azure.com/changeincode" target="_blank">Sentinel</a></li>
-                        <li><a href="https://security.microsoft.com/homepage?tid=3ed6eb6f-f786-4caa-ab61-71333c0d8988" target="_blank">Defender</a></li>
-                        <li><a href="https://systal.service-now.com/now/nav/ui/classic/params/target/home_splash.do%3Fsysparm_direct%3Dtrue" target="_blank">SNOW</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Google Stuff</h4>
-                </div>
-                
-                <div class="tile">
-                    <h4>Microsoft Stuff</h4>
-                    <ul>
-                        <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Cool Stuff</h4>
-                    <ul>
-                        <li><a href="https://replit.com/@spudgun28905/DefenselessReasonablePlot#Main.java" target="_blank">Java City Picker</a></li>
-                        <li><a href="https://bard.google.com/" target="_blank">Gemini</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>GitHub</h4>
-                    <ul>
-                        <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hacking tools</a></li>
-                        <li><a href="https://github.com/finlaymac13/Next-Gens-Azure-Repo" target="_blank">Azure repo</a></li>
-                        <li><a href="https://github.com/finlaymac13/mywebsite" target="_blank">My site repo</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Tools</h4>
-                    <ul>
-                        <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
-                        <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
-                        <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
-                        <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
-                        <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
-                        <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
-                        <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
-                        <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Napier</h4>
-                    <ul>
-                        <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Articles</h4>
-                    <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">MS malware naming convention</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide" target="_blank">MS threat actor naming convention</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>SC-200 Exam Prep</h4>
-                    <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification" target="_blank">SC-200 home page</a></li>
-                        <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-exam-prep/learn/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
-                        <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
-                        <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
-                        <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>GPT</h4>
-                    <ul>
-                        <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
-                    </ul>
-                </div>
-                
-                <div class="tile">
-                    <h4>Website</h4>
-                    <ul>
-                        <li><a href="https://finlaymac13.github.io/mywebsite/" target="_blank">My Site</a></li>
-                    </ul>
+                <div class="grid-container">
+                    <div class="tile">
+                        <h4>SOC</h4>
+                        <ul>
+                            <li><a href="https://portal.azure.com/#home" target="_blank">Azure</a></li>
+                            <li><a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview" target="_blank">AD</a></li>
+                            <li><a href="https://portal.azure.com/changeincode" target="_blank">Sentinel</a></li>
+                            <li><a href="https://security.microsoft.com/homepage?tid=3ed6eb6f-f786-4caa-ab61-71333c0d8988" target="_blank">Defender</a></li>
+                            <li><a href="https://systal.service-now.com/now/nav/ui/classic/params/target/home_splash.do%3Fsysparm_direct%3Dtrue" target="_blank">SNOW</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Google Stuff</h4>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Microsoft Stuff</h4>
+                        <ul>
+                            <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Cool Stuff</h4>
+                        <ul>
+                            <li><a href="https://replit.com/@spudgun28905/DefenselessReasonablePlot#Main.java" target="_blank">Java City Picker</a></li>
+                            <li><a href="https://bard.google.com/" target="_blank">Gemini</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>GitHub</h4>
+                        <ul>
+                            <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hacking tools</a></li>
+                            <li><a href="https://github.com/finlaymac13/Next-Gens-Azure-Repo" target="_blank">Azure repo</a></li>
+                            <li><a href="https://github.com/finlaymac13/mywebsite" target="_blank">My site repo</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
+                            <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
+                            <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
+                            <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
+                            <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
+                            <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
+                            <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
+                            <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Napier</h4>
+                        <ul>
+                            <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Articles</h4>
+                        <ul>
+                            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">MS malware naming convention</a></li>
+                            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide" target="_blank">MS threat actor naming convention</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>SC-200 Exam Prep</h4>
+                        <ul>
+                            <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification" target="_blank">SC-200 practice</a></li>
+                            <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-2023/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
+                            <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
+                            <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
+                            <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>GPT</h4>
+                        <ul>
+                            <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Website</h4>
+                        <ul>
+                            <li><a href="https://finlaymac13.github.io/mywebsite/" target="_blank">My Site</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
