@@ -125,6 +125,26 @@
             font-size: 1.2em;
             text-align: center;
         }
+        .profile-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .profile-tile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .profile-tile p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +162,19 @@
         <section id="home" class="section-content active">
             <h2>Home</h2>
             <p>This is the home page content. You can add more sections or change the existing content.</p>
-            
+
+            <!-- Profile Tile -->
+            <div class="profile-tile">
+                <img src="https://media.licdn.com/dms/image/C4E03AQGqrurTZhtAfA/profile-displayphoto-shrink_200_200/0/1668018988904?e=2147483647&v=beta&t=hvOJFFRaNnggMLoMsVM21CvA-gAUW7w49ST37kFTJCo" alt="Finlay Mackenzie">
+                <h4>Finlay Mackenzie</h4>
+                <p>Level 1 SOC Analyst in Scotland</p>
+                <p>Studying for a BEng in Cybersecurity, graduating in 2027</p>
+                <p>Multiple interests in computing including:</p>
+                <p>Web Design, Coding (HTML, Java, Python, CSS), AI and ML, Defensive Security</p>
+                <p>Contact:</p>
+                <p><a href="https://www.linkedin.com/in/finlay-mackenzie-809188221/" target="_blank">LinkedIn</a> | <a href="mailto:finlay@mackenzie1.co.uk">Email</a></p>
+            </div>
+
             <button class="collapsible">Useful Links</button>
             <div class="content">
                 <div class="grid-container">
@@ -189,27 +221,14 @@
                         <h4>Tools</h4>
                         <ul>
                             <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
-                            <li><a href="https://otx.alienvault.com/" target="_blank">AlienVault</a></li>
-                            <li><a href="https://nvd.nist.gov/" target="_blank">NVD home</a></li>
-                            <li><a href="https://ipinfo.io/" target="_blank">IPinfo</a></li>
-                            <li><a href="https://email-checker.net/" target="_blank">Email Verifier</a></li>
-                            <li><a href="https://urlscan.io/" target="_blank">URLscan</a></li>
-                            <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></li>
-                            <li><a href="https://exchange.xforce.ibmcloud.com/" target="_blank">IBM Xforce</a></li>
+                            <li><a href="https://otx.alienvault.com/" target="_blank">Alienvault OTX</a></li>
                         </ul>
                     </div>
                     
                     <div class="tile">
-                        <h4>Napier</h4>
+                        <h4>Microsoft Projects</h4>
                         <ul>
-                            <li><a href="https://i.napier.ac.uk/campusm/home#menu" target="_blank">My Account</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tile">
-                        <h4>Articles</h4>
-                        <ul>
-                            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/malware-naming?view=o365-worldwide" target="_blank">Defender Naming</a></li>
+                            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-defender-security-center-whats-new?view=o365-worldwide" target="_blank">Defender Naming</a></li>
                             <li><a href="https://www.microsoft.com/en-us/security/business/siem-and-xdr" target="_blank">Microsoft XDR</a></li>
                         </ul>
                     </div>
