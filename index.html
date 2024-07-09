@@ -69,14 +69,6 @@
         footer.visible {
             bottom: 0; /* Move footer up to be visible */
         }
-        .footer-arrow {
-            font-size: 1.5em;
-            cursor: pointer;
-            transition: transform 0.3s; /* Smooth rotation transition */
-        }
-        .footer-arrow.open {
-            transform: rotate(180deg); /* Rotate arrow when footer is visible */
-        }
         .collapsible {
             background-color: #f1f1f1;
             cursor: pointer;
@@ -226,10 +218,34 @@
                     </div>
                     
                     <div class="tile">
-                        <h4>Training</h4>
+                        <h4>Tools</h4>
                         <ul>
-                            <li><a href="https://elearnsecurity.com/course/penetration_testing_student/" target="_blank">PTP Course</a></li>
+                            <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank">VirusTotal</a></li>
+                            <li><a href="https://otx.alienvault.com/" target="_blank">Alienvault OTX</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Microsoft Projects</h4>
+                        <ul>
+                            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-defender-security-center-whats-new?view=o365-worldwide" target="_blank">Defender Naming</a></li>
+                            <li><a href="https://www.microsoft.com/en-us/security/business/siem-and-xdr" target="_blank">Microsoft XDR</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>Azure Projects</h4>
+                        <ul>
+                            <li><a href="https://portal.azure.com/#home" target="_blank">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tile">
+                        <h4>SC-200</h4>
+                        <ul>
+                            <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/" target="_blank">SC-200 practice</a></li>
                             <li><a href="https://www.udemy.com/course/sc-200-microsoft-security-operations-analyst-2023/lecture/29680638?start=0#overview" target="_blank">Udemy training</a></li>
+                            <li><a href="https://www.certlibrary.com/exam/SC-200" target="_blank">certlibrary SC-200</a></li>
                             <li><a href="https://www.examtopics.com/exams/microsoft/sc-200/view/3/" target="_blank">Exam questions</a></li>
                             <li><a href="https://quizlet.com/710982453/microsoft-sc-200-flash-cards/" target="_blank">Quizlet flashcards</a></li>
                         </ul>
@@ -299,7 +315,6 @@
     <footer id="footer">
         <p><a href="#top" style="color: white;">Return to the top of the page</a></p>
         <p>© 2024 Finlay Mackenzie's Site</p>
-        <span class="footer-arrow">▼</span>
     </footer>
     <script>
         function showSection(sectionId) {
@@ -330,13 +345,11 @@
         // Function to show the footer
         function showFooter() {
             document.getElementById('footer').classList.add('visible');
-            document.querySelector('.footer-arrow').classList.add('open');
         }
 
         // Function to hide the footer
         function hideFooter() {
             document.getElementById('footer').classList.remove('visible');
-            document.querySelector('.footer-arrow').classList.remove('open');
         }
 
         // Event listener for mousemove
