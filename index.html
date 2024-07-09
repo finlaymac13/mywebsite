@@ -342,28 +342,32 @@
             }
         });
 
-        // Function to show the footer
-        function showFooter() {
-            document.getElementById('footer').classList.add('visible');
-        }
+        // Define the trigger area height (in pixels)
+var triggerAreaHeight = 100; // Adjust this value as needed
 
-        // Function to hide the footer
-        function hideFooter() {
-            document.getElementById('footer').classList.remove('visible');
-        }
+// Function to show the footer
+function showFooter() {
+    document.getElementById('footer').classList.add('visible');
+}
 
-        // Event listener for mousemove
-        document.addEventListener('mousemove', function(event) {
-            var y = event.clientY;
-            var windowHeight = window.innerHeight;
-            var footerHeight = document.getElementById('footer').offsetHeight;
-            
-            if (windowHeight - y < footerHeight) {
-                showFooter();
-            } else {
-                hideFooter();
-            }
-        });
+// Function to hide the footer
+function hideFooter() {
+    document.getElementById('footer').classList.remove('visible');
+}
+
+// Event listener for mousemove
+document.addEventListener('mousemove', function(event) {
+    var y = event.clientY;
+    var windowHeight = window.innerHeight;
+    var footerHeight = document.getElementById('footer').offsetHeight;
+    
+    if (windowHeight - y < footerHeight + triggerAreaHeight) {
+        showFooter();
+    } else {
+        hideFooter();
+    }
+});
+
     </script>
 </body>
 </html>
