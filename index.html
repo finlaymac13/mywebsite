@@ -150,7 +150,8 @@
         .profile-tile p {
             margin: 5px 0;
         }
-       .timeline {
+
+.timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -193,6 +194,17 @@
     box-sizing: border-box;
 }
 
+.timeline-circle {
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9660E5;
+    left: calc(50% - 10px);
+    z-index: 1;
+}
+
 .timeline-icon {
     position: absolute;
     top: 10px;
@@ -204,7 +216,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .timeline-icon img {
@@ -243,6 +255,7 @@
         right: auto;
     }
 }
+
     </style>
 </head>
 <body>
@@ -402,6 +415,7 @@
     
     <div class="timeline">
         <div class="timeline-item left">
+            <div class="timeline-circle"></div>
             <div class="timeline-content">
                 <div class="timeline-icon">
                     <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
@@ -411,6 +425,7 @@
             </div>
         </div>
         <div class="timeline-item right">
+            <div class="timeline-circle"></div>
             <div class="timeline-content">
                 <div class="timeline-icon">
                     <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
@@ -420,9 +435,10 @@
             </div>
         </div>
         <div class="timeline-item left">
+            <div class="timeline-circle"></div>
             <div class="timeline-content">
                 <div class="timeline-icon">
-                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scotland.org%2Fstudy%2Fscottish-universities%2Fedinburgh-napier-university&psig=AOvVaw3iariTT9gOqt5Bpk8fVCyc&ust=1720687774508000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCMjJqc6LnIcDFQAAAAAdAAAAABAE" alt="Napier University Logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWC_cc1wT3bdizietsc43_rk22bLr_6OZtQ&s" alt="Napier University Logo">
                 </div>
                 <h3>September 2023 - September 2027</h3>
                 <p>Also during my time as a SOC analyst I am enrolled in a 4 year Cybersecurity course covering everything I need to learn about Cybersecurity.</p>
