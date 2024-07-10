@@ -150,6 +150,132 @@
         .profile-tile p {
             margin: 5px 0;
         }
+        .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #9660E5;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #9660E5;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item::before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-item.left::before {
+    left: 30px;
+    right: auto;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    background-color: #9660E5;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-icon img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::before {
+        left: 60px;
+        border: none;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 60px;
+        border: none;
+    }
+
+    .timeline-icon {
+        left: 18px;
+        right: auto;
+    }
+}
     </style>
 </head>
 <body>
@@ -304,9 +430,39 @@
         </section>
         
         <section id="CV" class="section-content">
-            <h2>CV</h2>
-            <p>This is a brief summary of my accomplishments, full CV available upon request</p>
-        </section>
+    <h2>CV</h2>
+    <p>This is a brief summary of my accomplishments, full CV available upon request</p>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
+            </div>
+            <div class="timeline-content">
+                <h3>September 2022 - July 2023</h3>
+                <p>I joined Systal in 2022 as an apprentice. This is where I learned valuable skills in the field of security such as DFIR, pentesting and defensive security along with the basics that define the entire field such as operating systems, coding and networking. The skills I learned here have helped me understand the basics of cybersecurity.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
+            </div>
+            <div class="timeline-content">
+                <h3>August 2023 - Present</h3>
+                <p>In the summer of 2023 I was promoted to Level 1 SOC Analyst at Systal and this is where I am currently. This job is an extension of the apprenticeship where I apply the skills I have learned to help the company protect their digital environment whilst protecting our customers too.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scotland.org%2Fstudy%2Fscottish-universities%2Fedinburgh-napier-university&psig=AOvVaw3iariTT9gOqt5Bpk8fVCyc&ust=1720687774508000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCMjJqc6LnIcDFQAAAAAdAAAAABAE" alt="Napier University Logo">
+            </div>
+            <div class="timeline-content">
+                <h3>September 2023 - September 2027</h3>
+                <p>Also during my time as a SOC analyst I am enrolled in a 4 year Cybersecurity course covering everything I need to learn about Cybersecurity.</p>
+            </div>
+        </div>
+    </div>
+</section>
         
         <section id="contact" class="section-content">
             <h2>Contact</h2>
