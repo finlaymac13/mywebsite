@@ -256,6 +256,46 @@
         right: auto;
     }
 }
+        .contact-tiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.contact-tile:hover {
+    transform: scale(1.05);
+}
+
+.contact-tile img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.contact-tile p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-tile a {
+    text-decoration: none;
+    color: inherit;
+}
 
     </style>
 </head>
@@ -448,13 +488,44 @@
     </div>
 </section>
         
-        <section id="contact" class="section-content">
-            <h2>Contact</h2>
-            <p>
-                Email: <a href="mailto:finlay@mackenzie1.co.uk">finlay@mackenzie1.co.uk</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/finlay-mackenzie-809188221/" target="_blank">https://www.linkedin.com/in/finlay-mackenzie-809188221/</a>
-            </p>
-        </section>
+        <section id="CV" class="section-content">
+    <h2>CV</h2>
+    <p>This is a brief summary of my accomplishments, full CV available upon request</p>
+    
+    <div class="timeline">
+        <div class="timeline-item left">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <div class="timeline-icon">
+                    <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
+                </div>
+                <h3>September 2022 - July 2023</h3>
+                <p>I joined Systal in 2022 as an apprentice. This is where I learned valuable skills in the field of security such as DFIR, pentesting and defensive security along with the basics that define the entire field such as operating systems, coding and networking. The skills I learned here have helped me understand the basics of cybersecurity.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <div class="timeline-icon">
+                    <img src="https://media.licdn.com/dms/image/D4E0BAQEAjJD4DSX2vA/company-logo_200_200/0/1707479198138/systal_technology_solutions_logo?e=2147483647&v=beta&t=HY96X6wEu8ABybijrd_5yVZA54Ml0BWRg5DkE_91mao" alt="Systal Logo">
+                </div>
+                <h3>August 2023 - Present</h3>
+                <p>In the summer of 2023 I was promoted to Level 1 SOC Analyst at Systal and this is where I am currently. This job is an extension of the apprenticeship where I apply the skills I have learned to help the company protect their digital environment whilst protecting our customers too.</p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-circle"></div>
+            <div class="timeline-content">
+                <div class="timeline-icon">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scotland.org%2Fstudy%2Fscottish-universities%2Fedinburgh-napier-university&psig=AOvVaw3iariTT9gOqt5Bpk8fVCyc&ust=1720687774508000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCMjJqc6LnIcDFQAAAAAdAAAAABAE" alt="Napier University Logo">
+                </div>
+                <h3>September 2023 - September 2027</h3>
+                <p>Also during my time as a SOC analyst I am enrolled in a 4 year Cybersecurity course covering everything I need to learn about Cybersecurity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
     <footer id="footer">
         <p><a href="#top" style="color: white;">Return to the top of the page</a></p>
